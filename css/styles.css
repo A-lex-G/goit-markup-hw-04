@@ -155,10 +155,6 @@ ul {
   padding-top: 192px;
   padding-bottom: 192px;
   text-align: center;
-
-  background-color: var(--navy-blue);
-
-  height: 603px;
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
@@ -168,7 +164,6 @@ ul {
       rgba(46, 47, 66, 0.7)
     ),
     url("../images/hero_image.jpg");
-  background-color: var(--navy-blue);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -235,11 +230,11 @@ ul {
 
 .icon-block {
   display: flex;
-  width: 264px;
+  justify-content: center;
+  align-items: center;
   height: 112px;
   border-radius: 4px;
   margin-bottom: 8px;
-  padding: 24px 100px;
   background-color: var(--cloud);
 }
 
@@ -317,10 +312,7 @@ ul {
 .job-discription {
   padding-top: 32px;
   padding-bottom: 32px;
-  width: 232px;
   text-align: center;
-  margin-left: auto;
-  margin: 0 auto;
 }
 
 .person {
@@ -338,27 +330,24 @@ ul {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--slate);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .social {
   display: flex;
-  padding: 4px 0px;
-  width: 232px;
-  height: 48px;
-  margin-right: auto;
-  margin-left: auto;
+  justify-content: center;
 }
 
 .social .link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   background-color: var(--iris);
   fill: var(--cloud);
   border: none;
   border-radius: 50%;
-  padding: 12px;
 }
 
 .soclink-icon {
@@ -381,19 +370,23 @@ ul {
   flex-direction: row;
 }
 
+.customers-list > .item {
+  flex-basis: 168px;
+}
+
 .customers-list > .item:not(:last-child) {
   margin-right: 24px;
 }
 
 .customers-list .link {
-  display: block;
-  width: 168px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 88px;
-  padding: 16px 32px;
   color: var(--light-slate);
   border: 1px solid var(--light-slate);
   border-radius: 4px;
-  align-items: center;
 }
 
 .customers-icon {
@@ -427,7 +420,7 @@ ul {
 .btn-list {
   display: flex;
   justify-content: center;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .btn-list .item:not(:last-child) {
@@ -444,6 +437,7 @@ ul {
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
+  cursor: pointer;
   letter-spacing: 0.04em;
   color: var(--iris);
   background-color: var(--cloud);
@@ -456,7 +450,7 @@ ul {
   background-color: var(--iris);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
+  border-color: transparent;
 }
 
 .btn-filter:focus {
@@ -464,6 +458,7 @@ ul {
   background-color: var(--iris);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-color: transparent;
 }
 
 /* PORTFOLIO CARD STYLES */
@@ -472,12 +467,17 @@ ul {
   flex-wrap: wrap;
 }
 
-.card-block > .item:hover {
+.card-block .link {
+  display: block;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.card-block .link:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.card-block > .item:focus {
+.card-block .link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -542,6 +542,7 @@ ul {
 
 .footer > .container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-main {
@@ -574,7 +575,7 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--white);
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .links-list {
